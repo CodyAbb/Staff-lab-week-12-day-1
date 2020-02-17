@@ -18,6 +18,15 @@ public class DeveloperTest {
         assertEquals("Susan", developer.getName());
     }
     @Test
+    public void canSetName() {
+        developer.setName("Dave");
+        assertEquals("Dave", developer.getName());
+    }
+    @Test public void cannotSetName(){
+        developer.setName("");
+        assertEquals("Susan", developer.getName());
+    }
+    @Test
     public void canGetNINumber(){
         assertEquals("NI67890", developer.getnINumber());
     }

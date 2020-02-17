@@ -5,6 +5,7 @@ import Staff.Employee;
 public class Director extends Employee {
 
     private double budget;
+
     public Director(String name, String nINumber,int salary, double budget) {
         super(name, nINumber, salary );
         this.budget = budget;
@@ -12,5 +13,11 @@ public class Director extends Employee {
 
     public double getBudget() {
         return budget;
+    }
+
+    @Override
+    public int payBonus(){
+        int newBonus = super.getSalary();
+        return newBonus *= 0.02;
     }
 }
